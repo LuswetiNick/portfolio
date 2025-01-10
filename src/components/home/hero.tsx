@@ -5,7 +5,10 @@ const Hero = () => {
   const words =
     "Building Modern Web Experiences with Precision and Creativity.";
   return (
-    <div className="h-[40rem] w-full rounded-md flex md:items-center md:justify-center bg-background antialiased bg-grid-white/[0.02] relative overflow-hidden">
+    <section
+      id="home"
+      className="h-[40rem] w-full rounded-md flex md:items-center md:justify-center bg-background antialiased bg-grid-white/[0.02] relative overflow-hidden"
+    >
       <Spotlight
         className="-top-40 left-0 md:left-60 md:-top-20"
         fill="white"
@@ -25,7 +28,7 @@ const Hero = () => {
           impactful web applications. Let&apos;s bring your ideas to life
         </p>
       </div>
-    </div>
+    </section>
   );
 };
 export default Hero;

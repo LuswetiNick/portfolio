@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const RecentProjects = () => {
   return (
-    <section>
+    <section id="projects">
       <h1 className="text-3xl font-bold sm:text-2xl text-center">
         My Projects
       </h1>
