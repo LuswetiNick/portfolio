@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Work_Sans } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "@/components/theme-provider";
 
 const workSans = Work_Sans({
   variable: "--font-work-sans",
@@ -19,7 +20,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${workSans.variable} antialiased`}>{children}</body>
+      <body className={`${workSans.variable} antialiased`}>
+        <ThemeProvider attribute="class" defaultTheme="dark">
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
