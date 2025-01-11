@@ -9,15 +9,17 @@ import {
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 
+interface NavItem {
+  name: string;
+  link: string;
+  // icon?: JSX.Element;
+}
+
 export const FloatingNav = ({
   navItems,
   className,
 }: {
-  navItems: {
-    name: string;
-    link: string;
-    icon?: JSX.Element;
-  }[];
+  navItems: NavItem[];
   className?: string;
 }) => {
   const { scrollYProgress } = useScroll();
@@ -27,7 +29,7 @@ export const FloatingNav = ({
   useMotionValueEvent(scrollYProgress, "change", (current) => {
     // Check if current is not undefined and is a number
     if (typeof current === "number") {
-      let direction = current! - scrollYProgress.getPrevious()!;
+      const direction = current! - scrollYProgress.getPrevious()!;
 
       if (scrollYProgress.get() < 0.05) {
         setVisible(false);
@@ -60,15 +62,14 @@ export const FloatingNav = ({
           className
         )}
       >
-        {navItems.map((navItem: any, idx: number) => (
+        {navItems.map((navItem: NavItem, idx: number) => (
           <Link
             key={`link=${idx}`}
             href={navItem.link}
             className={cn(
-              "relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
+              "relative  items-center flex space-x-1  hover:text-muted-foreground"
             )}
           >
-            <span className="sm:hidden">{navItem.icon}</span>
             <span className="text-sm">{navItem.name}</span>
           </Link>
         ))}

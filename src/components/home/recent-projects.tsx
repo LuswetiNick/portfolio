@@ -12,10 +12,14 @@ const RecentProjects = () => {
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => (
             <div
-              className="lg:mi-h-[30rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
+              className="lg:mi-h-[30rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw] "
               key={project.id}
             >
-              <PinContainer title={project.link} href={project.link}>
+              <PinContainer
+                title={project.link}
+                href={project.link}
+                className=""
+              >
                 <div className="relative flex flex-col items-center justify-center sm:w-[350px] w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh]">
                   <Image
                     src={project.img}
