@@ -1,10 +1,10 @@
 import { projects } from "@/dummy-data";
-import { PinContainer } from "./ui/3d-pin";
 import Image from "next/image";
+import { PinContainer } from "../ui/3d-pin";
 
 const RecentProjects = () => {
   return (
-    <section id="projects">
+    <section id="projects" className="mb-24">
       <h1 className="text-3xl font-bold sm:text-2xl text-center">
         My Projects
       </h1>

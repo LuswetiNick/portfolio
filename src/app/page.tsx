@@ -1,6 +1,7 @@
+import Contact from "@/components/home/contact";
 import Hero from "@/components/home/hero";
 import { navItems } from "@/components/home/navbar/nav-items";
-import RecentProjects from "@/components/recent-projects";
+import RecentProjects from "@/components/home/recent-projects";
 import { FloatingNav } from "@/components/ui/floating-navbar";
 
 const Home = () => {
@@ -9,6 +10,7 @@ const Home = () => {
       <FloatingNav navItems={navItems} />
       <Hero />
       <RecentProjects />
+      <Contact />
     </main>
   );
 };
