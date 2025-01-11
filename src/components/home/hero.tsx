@@ -1,3 +1,4 @@
+import { HoverBorderGradient } from "../ui/hover-border-gradient";
 import { Spotlight } from "../ui/Spotlight";
 import { TextGenerateEffect } from "../ui/text-generate-effect";
 
@@ -14,9 +15,9 @@ const Hero = () => {
         fill="white"
       />
       <div className="relative z-10 max-w-screen-xl mx-auto px-4 py-8 md:px-8 flex flex-col items-center justify-center">
-        <button className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-4 font-semibold text-xl text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 cursor-none">
-          Hello👋, I&apos;m Nick
-        </button>
+        <HoverBorderGradient as="button" containerClassName="rounded-full">
+          <span>Hello👋, I&apos;m Nick</span>
+        </HoverBorderGradient>
         <div className="max-w-4xl">
           <TextGenerateEffect
             className=" font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50"
