@@ -1,5 +1,17 @@
 import { HoverBorderGradient } from "../ui/hover-border-gradient";
-import { MapPin } from "lucide-react";
+import { Code, MapPin } from "lucide-react";
+import { InfiniteMovingCards } from "../ui/infinite-moving-cards";
+
+const techStack = [
+  { text: "React", icon: <Code /> },
+  { text: "TypeScript", icon: <Code /> },
+  { text: "Tailwind", icon: <Code /> },
+  { text: "Next.js", icon: <Code /> },
+  { text: "Prisma", icon: <Code /> },
+  { text: "Node.js", icon: <Code /> },
+  { text: "PostgreSQL", icon: <Code /> },
+  { text: "MongoDB", icon: <Code /> },
+];
 
 const About = () => {
   return (
@@ -14,9 +26,9 @@ const About = () => {
               <HoverBorderGradient
                 as="button"
                 containerClassName="rounded-full"
-                className="flex items-center"
+                className="flex items-center text-xs"
               >
-                <MapPin className="mr-2 h-4 w-4" />
+                <MapPin className="mr-2 h-3 w-3 animate-pulse" />
                 <span>Nairobi, Kenya.</span>
               </HoverBorderGradient>
 
@@ -29,9 +41,20 @@ const About = () => {
               </p>
               <p className="mt-4">
                 I recently graduated with a degree in Software Development, and
-                I’ve worked on diverse projects, including SaaS platforms,
+                I&apos;ve worked on diverse projects, including SaaS platforms,
                 eCommerce sites, and real-time applications.
               </p>
+
+              <div className="mt-8">
+                <p className="text-sm text-muted-foreground mb-4">Tech Stack</p>
+                <div className="overflow-hidden">
+                  <InfiniteMovingCards
+                    items={[...techStack, ...techStack]}
+                    direction="left"
+                    speed="normal"
+                  />
+                </div>
+              </div>
             </div>
           </div>
 
@@ -47,4 +70,5 @@ const About = () => {
     </section>
   );
 };
+
 export default About;
