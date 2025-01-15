@@ -1,6 +1,7 @@
 import { HoverBorderGradient } from "../ui/hover-border-gradient";
 import { MapPin } from "lucide-react";
 import { InfiniteMovingCards } from "../ui/infinite-moving-cards";
+import { aboutMe } from "@/dummy-data";
 // import { techStack } from "@/dummy-data";
 
 const About = () => {
@@ -60,11 +61,7 @@ const About = () => {
           </div>
 
           <div>
-            <img
-              src="https://images.unsplash.com/photo-1731690415686-e68f78e2b5bd?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              className="rounded"
-              alt=""
-            />
+            <img src={aboutMe.img} className="rounded" alt="" />
           </div>
         </div>
       </div>

@@ -5,8 +5,8 @@ import { PinContainer } from "../ui/3d-pin";
 const RecentProjects = () => {
   return (
     <section id="projects" className="mb-24">
-      <h1 className="text-3xl font-bold sm:text-2xl text-center">
-        My Projects
+      <h1 className="text-3xl font-bold sm:text-2xl text-center mb-8">
+        My Projects<span className="text-primary animate-pulse">.</span>
       </h1>
       <div className="max-w-screen-xl mx-auto px-4 md:px-8">
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -21,13 +21,14 @@ const RecentProjects = () => {
                 className=""
               >
                 <div className="relative flex flex-col items-center justify-center sm:w-[350px] w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh]">
-                  <Image
+                  {/* <Image
                     src={project.img}
                     alt={project.title}
                     height="1000"
                     width="1000"
                     className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
-                  />
+                  /> */}
+                  <div className="flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500" />
                 </div>
                 <div className="my-4 w-full space-y-3">
                   <h2 className="font-bold text-lg md:text-xl">
