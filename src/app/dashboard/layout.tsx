@@ -8,7 +8,7 @@ const DashboardLayout = ({
   return (
     <main>
       <Header />
-      <section>{children}</section>
+      <section className="h-screen w-full">{children}</section>
     </main>
   );
 };

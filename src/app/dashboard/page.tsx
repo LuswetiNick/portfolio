@@ -1,3 +1,4 @@
+import { Navigation } from "@/components/dashboard/header/navigation";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import { redirect } from "next/navigation";
 const Dashboard = async () => {
@@ -8,6 +9,10 @@ const Dashboard = async () => {
     redirect("/login");
   }
 
-  return <div>Dashboard</div>;
+  return (
+    <section>
+      <Navigation />
+    </section>
+  );
 };
 export default Dashboard;
