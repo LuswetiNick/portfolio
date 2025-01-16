@@ -21,6 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning className="scroll-smooth">
       <body className={`${workSans.variable} antialiased`}>
+        <link rel="icon" href="/favicon.png" sizes="any" />
         <ThemeProvider attribute="class" defaultTheme="dark">
           {children}
         </ThemeProvider>

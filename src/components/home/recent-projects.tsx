@@ -34,7 +34,7 @@ const RecentProjects = () => {
                   <h2 className="font-bold text-lg md:text-xl">
                     {project.title}
                   </h2>
-                  <p className="text-muted-foreground font-normal text-sm">
+                  <p className="text-muted-foreground font-normal text-sm line-clamp-2">
                     {project.des}
                   </p>
                 </div>
